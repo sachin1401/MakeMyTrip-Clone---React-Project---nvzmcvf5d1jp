@@ -1,0 +1,82 @@
+
+/* ***************** */
+/* flight section */
+.search-container {  
+  background-color: #ffffff;
+  border-radius: 0.5rem;  
+  justify-content: center;
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+.search-labelBox-border{
+  margin: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.search-container-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40vh; 
+  background-image: linear-gradient(rgb(9, 18, 68), #003290);
+}
+
+.search-labelBox {
+  display: flex;
+  flex-direction: column;
+  font-size: large;
+  gap: 5px;
+  padding: 1rem;
+  border: 1px solid rgb(232, 232, 232);
+}
+.search-labelBox label{
+  font-size:smaller;
+}
+.search-labelBox-size{
+  height: 40px;
+  width: 60px; 
+  font-size: 50pt;
+  font-weight: bolder;
+}
+.search-labelBox input[type="text"] {
+  width: 220px;
+  padding: 8px;
+  font-size: 16px;
+  border: 0;
+  background-color: whitesmoke;
+  outline: 0;
+}
+.search-button-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 1rem;
+}
+
+.search-button-container button {
+  background-color: rgb(9, 18, 68);  
+  border-radius: 80px;
+}
+.flight-container , .hotels-container{
+  position: relative;
+}
+
+/* Media queries for mobile */
+@media only screen and (max-width: 767px) {
+  .search-container {
+    margin: 1rem;
+  }
+  .search-container-wrapper {
+    height: 80vh;
+  }
+}
+
+/* Media queries for tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .search-container {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}

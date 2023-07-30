@@ -1,0 +1,247 @@
+/* login- signup image container */
+.signin_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+}
+
+.navIcon {
+  width: 35px;
+  height: 35px;
+  text-align: center;
+}
+
+.logInBtn {
+  color: white;
+  padding: 2px 4px;
+  font-size: small;
+}
+
+.userContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  color: #f8f8f8;
+}
+
+
+
+/* home page - travel cards headings */
+.seven h1 {
+    text-align: center;
+        font-size:30px; font-weight:300; color:#222; letter-spacing:1px;
+        text-transform: uppercase;
+    
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-template-rows: 27px 0;
+        grid-gap: 20px;
+        align-items: center; 
+    }
+    
+    .seven h1:after,.seven h1:before {
+        content: " ";
+        display: block;
+        border-bottom: 1px solid #c50000;
+        border-top: 1px solid #c50000;
+        height: 5px;
+      background-color:#f8f8f8;
+    }
+/* Media Queries for Responsive Design */
+
+/* Mobile Devices */
+@media only screen and (max-width: 767px) {
+  .seven h1 {
+      font-size: 20px; 
+      grid-template-columns: 1fr; 
+      grid-template-rows: 27px 30px; 
+      grid-gap: 10px; 
+  }
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .seven h1 {
+      font-size: 24px; 
+  }
+}
+
+
+/* home page - travel cards details */
+
+.all-cards {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  padding-left: 1rem;
+  overflow: hidden;
+}
+
+.card {
+  position: relative;
+  width: 250px;
+  height: 350px;
+  margin: 10px; 
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card__content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  padding: 10px; 
+  background-color: #fff;
+  transition: transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+}
+
+.card__title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px; 
+}
+
+.card__text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 10px; 
+  overflow: hidden;
+}
+
+.card__button {
+  display: inline-block;
+  padding: 8px 15px; 
+  background-color: #000;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.card:hover {
+  transform: translateY(-5px); 
+}
+
+.card:hover .card__image img {
+  transform: scale(1); 
+}
+
+/* .card:hover .card__content {
+  transform: translateY(-100%); 
+} */
+
+/* Media Queries for Responsive Design */
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .card {
+      width: 48%;
+      max-width: 300px;
+  }
+}
+
+
+    /* home page ques & answer section */
+    .home-table {
+      background-color: rgb(218, 218, 218);
+      width: 100%;
+      text-align: left;
+      padding-left: 12rem;
+      padding-right: 12rem;
+      padding-top: 5rem;
+      padding-bottom: 5rem;
+      display: flex; 
+      flex-wrap: wrap; 
+      justify-content: space-between; 
+  }
+  
+  .table-home-gap {
+      padding-left: 2rem;
+      padding-right: 2rem;
+  }
+  
+  .table-home-size {
+      width: 30%;
+      padding-top: 1rem;
+  }
+  
+  /* Media Queries for Responsive Design */
+  
+  /* Mobile Devices */
+  @media only screen and (max-width: 767px) {
+      .home-table {
+        display: flex;
+          padding-left: 2rem;
+          padding-right: 0rem; 
+          padding-top: 3rem; 
+          padding-bottom: 3rem; 
+          flex-direction: row-reverse; 
+          align-items: center; 
+      }
+  
+      .table-home-size .table-home-gap{
+          width: 100%; 
+          padding-top: 0.5rem;
+      }
+  }
+  
+  /* Tablets */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .home-table {
+          padding: 4rem;        
+          flex-direction: row; 
+          justify-content: space-evenly;
+      }
+  
+      .table-home-size .table-home-gap{
+          width: 48%;
+          padding-top: 0.8rem; 
+      }
+  }
+  
+    
+
+
+    /* home page - website service providing details */
+    .website-user-details{
+        margin-left: 12rem;
+        margin-right: 12rem;
+        text-align: justify;
+        padding-bottom: 2rem;
+        }
+
+     .website-user-title{
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
+     }   
+
+        /* Media Query for Mobile Devices */
+      @media only screen and (max-width: 767px) {
+        .website-user-details {
+            margin-left: 1rem; 
+            margin-right: 1rem; 
+            text-align: left;
+        }
+      }

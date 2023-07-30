@@ -1,0 +1,86 @@
+ /* home page - customer reviews */
+
+ .customer-card{
+    width: 330px;
+    border: 1px solid gray;
+    box-shadow: 1px 1px 3px #888;
+    border-top: 10px solid green;
+    min-height: 250px;
+    padding: 10px;
+    margin: 10px;
+    background-color: #f2f2f2;
+    }
+    
+    .customer-img{
+      border-radius: 50%;
+      width: 70px;
+      margin: 10px;
+    }
+    
+    .customer-h1{
+      font-weight: lighter;
+      margin-left: 100px;
+      margin-top: -70px;
+    }
+    
+    .customer-p{
+      margin: 10px;
+      font-family: segoe ui;
+      line-height: 1.4em;
+      font-size: 1.2em;
+      padding-top: 1rem;
+    }
+    
+    #mainbox-customer{
+      font-family: calibri;
+      box-sizing: border-box;
+      justify-content: center;
+      display: flex;
+      flex-wrap: wrap;      
+    }
+    .customer-review{
+        background-color: #ffffff;
+        /* border: 1px solid black; */
+      margin-left: 12rem;
+      margin-right: 11rem;
+      border-radius: 0.5rem;
+      padding-bottom: 3rem;
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+    }
+    .review-heading{
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    /* Media Queries for Responsive Design */
+
+/* Mobile Devices */
+@media only screen and (max-width: 767px) {
+    .customer-card {
+        width: 100%; 
+        max-width: 400px;
+    }
+
+    .customer-h1 {
+        margin-left: 0; 
+        margin-top: 20px; 
+    }
+
+    .customer-review {
+        margin: 10px;
+        margin-left: 1rem; 
+        margin-right: 1rem; 
+    }
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .customer-card {
+        width: 78%; 
+    }
+    .customer-review {
+        margin-left: 90px; 
+        width: 79%;
+    }
+}

@@ -1,0 +1,22 @@
+
+  
+  /* Media Queries for Responsive Design */
+  
+  /* Mobile Devices */
+  @media only screen and (max-width: 767px) {
+    /* .imageSlider{
+      height: 450px;
+      display: none;
+    } */
+    .slide-container{
+      display: none;
+    }
+  }
+  
+  /* Tablets */
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    .imageSlider{
+      height: 550px;
+    }
+  }
+  

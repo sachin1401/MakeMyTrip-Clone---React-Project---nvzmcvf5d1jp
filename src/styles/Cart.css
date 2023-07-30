@@ -1,0 +1,156 @@
+/* Cart.css */
+
+
+.inner-cart-wrapper {  
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.item-details {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  margin-top: 5rem;
+  background-color: #343a40;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  color: white;
+}
+
+.empty-cart {
+  text-align: center;
+  font-size: 24px;
+  color: #888;
+}
+
+.shopping-container {
+  border: 1px solid #888;
+  border-radius: 0.5rem;
+  padding: 20px;
+  margin-bottom: 20px;
+  background-color: #fff;
+  /* padding-left: 40px; */
+  /* padding-right: 40px; */
+  /* background-color:#b7b7b7; */
+}
+
+.shopping-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+
+ 
+}
+
+.product-title {
+  flex: 1;
+  font-size:medium;
+}
+
+.product-price {
+  font-weight: bold;
+  font-size:medium;
+}
+
+.product-quantity {
+  margin-left: 10px;
+  font-size: 14px;
+  color: #595959;
+}
+
+.increase-decrease-remove-btns {
+  margin-left: auto;
+}
+
+.increase-btn,
+.decrease-btn,
+.remove-btn {
+  background-color: rgb(9, 18, 68);
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.clear-cart-btn{
+  background-color: #ff5b5c;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+/* .clear-cart-btn, */
+.buy-now-btn {
+  background-color: rgb(9, 18, 68);
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.total-price {
+  font-size: 24px;
+  margin-bottom: 20px;color: #ff5b5c;
+}
+
+.btns-cart {
+  display: flex;
+  justify-content: flex-end;
+}
+
+
+/* Media queries for tablet */
+@media only screen and (max-width: 1023px) {
+  .item-details {
+    margin-top: 2rem;
+  }
+}
+
+/* Media queries for mobile */
+@media only screen and (max-width: 767px) {
+  .item-details {
+    font-size: 18px;
+    padding: 1rem;
+  }
+
+  .inner-cart-wrapper {  
+    margin: 1rem;
+  }
+
+  .shopping-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .product-title {
+    flex: none;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+
+  .product-price {
+    font-size: 18px;
+  }
+
+  .product-quantity {
+    margin-left: 0;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+
+  .increase-decrease-remove-btns {
+    margin-left: 0;
+    margin-top: 5px;
+  }
+
+  .total-price {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+
+  .btns-cart {
+    justify-content: center;
+  }
+}

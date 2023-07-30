@@ -1,0 +1,119 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Sidebar styles */
+  #sidebar {
+    width: 280px;
+    height: 700px;
+    padding: 20px;
+    margin-left: 12rem;
+    margin-top: 2.5rem;
+    border: 1px solid #e0e0e0;
+    background: white;
+  }
+  
+  #sidebar h4 {
+    color: #800000;
+    margin-bottom: 15px;
+  }
+  
+  #sidebar h6 {
+    color: #000;
+    margin-bottom: 10px;
+  }
+  
+  #sidebar form {
+    margin-top: 10px;
+  }
+  
+  #sidebar .border-bottom {
+    border-bottom: 1px solid #e0e0e0;
+    padding-bottom: 10px;
+  }
+  
+  #sidebar .py-2 {
+    padding-top: 15px;
+  }
+  
+  /* Custom checkbox styles */
+  .form-group {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-right: 2rem;
+  }
+  
+  .form-group input[type="checkbox"] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin: 0;
+    cursor: pointer;
+  }
+  
+  .form-group input[type="checkbox"]:checked {
+    background-color: #2196F3;
+  }
+  
+  .form-group label {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .form-group .fa-icon {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .form-group input[type="checkbox"]:checked + .fa-icon {
+    background-color: #2196F3;
+  }
+  
+  .form-group input[type="checkbox"]:checked + .fa-icon::before {
+    content: "\f00c"; /* FontAwesome checkmark icon */
+    font-family: "FontAwesome";
+    font-size: 14px;
+    color: #fff;
+  }
+  
+  /* Media queries for mobile */
+@media only screen and (max-width: 767px) {
+  #sidebar {
+    width: 30%;
+    height: 600px;
+    margin: 0;
+    margin-top: 2rem;
+    padding: 10px;
+  }
+
+  .form-group {
+    padding-right: 1rem;
+  }
+}
+
+/* Media queries for tablet */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  #sidebar {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 10px;
+  }
+
+  .form-group {
+    padding-right: 1.5rem;
+  }
+}

@@ -1,0 +1,71 @@
+
+.table-data{
+    text-align: left;   
+}
+
+.table-td{
+    width: 250px;
+    padding: 10px;
+  }
+.table-th {
+    width: 150px;
+    padding: 5px;
+  }
+  
+  button{
+    border: none;
+    background-color: rgb(9, 18, 68);
+    border-radius: 0.2rem;
+    padding: 1rem;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+    color: aliceblue;
+    font-size: large;
+    cursor: pointer;    
+  }
+  button:hover{
+    background-color:  rgba(9, 18, 68, 0.697);
+  }
+
+
+
+    /* ticket card */
+
+    .fetch-card {
+      width: 700px;
+      border-radius: 10px;
+      margin: 50px;
+      margin-left: 12rem;
+      background: rgb(205, 205, 205);
+      overflow: hidden;
+    }
+    .fetch-card-header {
+      height: 70px;
+      border: 2px solid rgb(9, 18, 68);
+      border-bottom: 2px dotted rgb(9, 18, 68);
+      border-radius: 10px 10px 0 0;
+      position: relative;
+    }
+    .fetch-card-header:before, .fetch-card-header:after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 24px;
+      background: #d7f8ff;
+      border-radius: 100%;
+      bottom: -12px;
+      border: 2px solid rgb(9, 18, 68);
+      box-sizing: border-box;
+    } 
+    .fetch-card-header:before { 
+      left: -13px;
+    }
+    .fetch-card-header:after {
+      right: -13px;
+    }
+    .fetch-card-body {
+      height: 300px;
+      border: 2px solid rgb(9, 18, 68);
+      border-top: none;
+      border-radius: 0 0 10px 10px;
+    }
