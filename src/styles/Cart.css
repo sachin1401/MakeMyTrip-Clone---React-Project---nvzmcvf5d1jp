@@ -21,6 +21,7 @@
   text-align: center;
   font-size: 24px;
   color: #888;
+  margin-top: 300px;
 }
 
 .shopping-container {
@@ -106,6 +107,9 @@
   .item-details {
     margin-top: 2rem;
   }
+  .cart-wrapper{
+    margin: 20px;
+  }
 }
 
 /* Media queries for mobile */
@@ -113,6 +117,10 @@
   .item-details {
     font-size: 18px;
     padding: 1rem;
+  }
+  .empty-cart {
+    margin-top: 300px;
+    margin-bottom: 300px;
   }
 
   .inner-cart-wrapper {  

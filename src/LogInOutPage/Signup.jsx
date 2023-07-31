@@ -63,7 +63,7 @@ const Signup = ({ isSignUpModalOpen, closeSignUpModal, openLoginModal }) => {
               <input
                 placeholder="Password"
                 className="signup-password"
-                type="text"
+                type="password"
                 onChange={(e) => setPassword(e.target.value)}
               />
               <button className="signup-btn">Sign up</button>

@@ -25,6 +25,7 @@ const Cart = () => {
         </h5>
         <div className="shopping-container">
           {items.map((item, index) => {
+            const subtotal = item.price * item.quantity;
             return (
               <div className="shopping-item" key={index}>
                 <h5 className="product-title">From: {item.from}</h5>
@@ -32,7 +33,7 @@ const Cart = () => {
                 <h5 className="product-title">To: {item.to}</h5>
                 <h5 className="product-title">City: {item.city}</h5>
                 <h5 className="product-title">Guest: {item.guests}</h5>
-                <h5 className="product-price">₹{item.price}</h5>
+                <h5 className="product-price">₹{subtotal}</h5>
                 <h5 className="product-quantity">( {item.quantity} )</h5>
                 <div className="increase-decrease-remove-btns">
                   <button

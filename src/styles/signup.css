@@ -75,9 +75,31 @@
     justify-items: center;
 }
 
+/* Media query for mobile */
 @media only screen and (max-width: 767px) {
-    .signup-custom-modal {
-        width: 300px;
-        margin-right: 230px;
+    .signup-custom-modal{
+        margin-right: 260px;
     }
-}
+    .signup-email, .signup-password, .signup-fullname, .signup-btn, .log-in-box {
+        width: 100%;
+      }
+    .signup-input-wrapper{
+        width: 250px;
+    }
+    
+  }
+
+/* Media query for tablets */
+@media only screen and  (max-width: 1024px) {
+    .signup-custom-modal {
+      width: 100%;
+      margin-left: 280px;
+    }
+    
+    .sign-up-heading {
+      margin: 0;
+    }
+    .signup-email, .signup-password, .signup-fullname, .signup-btn, .log-in-box {
+      width: 100%;
+    }
+  }

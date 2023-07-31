@@ -188,14 +188,14 @@ label {
   .card-image {
     width: 325px;
     top: -100px;
-    left: 50px;
+    left: 150px;
   }
 
   .card-image-shadow {
     width: 310px;
     height: 193px;
     top: -88px;
-    left: 57px;
+    left: 155px;
   }
 }
 
@@ -208,14 +208,14 @@ label {
   .card-image {
     width: 225px;
     top: -70px;
-    left: 80px;
+    left: 65px;
   }
 
-  .card-image-shadow {
+  .card-image-shadow { 
     width: 210px;
     height: 133px;
     top: -63px;
-    left: 85px;
+    left: 75px;
   }
 
   .form {

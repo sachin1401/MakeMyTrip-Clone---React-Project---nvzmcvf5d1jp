@@ -30,6 +30,7 @@ body {
     position: relative;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   .bp-card_label {
@@ -134,12 +135,13 @@ body {
     top: 35px;
     right: 35px;
     font-size: 36px;
-    background: transparentize(#FFAF96, 0.9);
+    background: transparentize(#003290, 0.9);
     padding: 10px;
     border-radius: 3px;
   }
   
-  @media only screen and (max-width: 600px) {
+  /* responsive for mobile */
+  /* @media only screen and (max-width: 600px) {
     .bp-card_label {
       top: 0;
       left: 0;
@@ -235,7 +237,7 @@ body {
       width: 20px;
       height: 20px;
     }
-  }
+  } */
   
   /* Media queries for mobile and tablet */
 @media only screen and (max-width: 600px) {
@@ -343,5 +345,28 @@ body {
     top: 22px;
     width: 20px;
     height: 20px;
+  }
+}
+
+/* Media query for tablets */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .ticket-btn {
+    margin-left: 19rem;
+  }
+
+  .bp-card_content h4 {
+    font-size: 32px;
+    margin: 0 500px 0 0;
+  }
+
+  .bp-card_content ul li {
+    padding-right: 20px;
+  }
+
+  .bp-card_content a.price {
+    font-size: 30px;
+    top: 25px;
+    right: 120px;
+    padding: 8px;
   }
 }

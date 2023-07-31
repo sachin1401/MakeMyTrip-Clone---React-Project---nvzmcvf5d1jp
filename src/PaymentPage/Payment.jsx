@@ -24,13 +24,6 @@ const Payment = () => {
       return;
     }
 
-    // Manually check form validity before submission
-    // const form = e.target;
-    // if (!form.checkValidity()) {
-    //   form.reportValidity();
-    //   return;
-    // }
-
     // You can perform any payment processing logic here
     // For the sake of example, we'll just show a success message
     setPaymentStatus("success");
