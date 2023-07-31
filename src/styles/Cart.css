@@ -110,6 +110,9 @@
   .cart-wrapper{
     margin: 20px;
   }
+  .empty-cart {
+    margin-top: 300px;
+  }
 }
 
 /* Media queries for mobile */
