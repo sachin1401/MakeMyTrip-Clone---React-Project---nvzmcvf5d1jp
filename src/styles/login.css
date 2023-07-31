@@ -18,7 +18,7 @@
   .login-modal-image{
     width: 30%;
     flex: 1;
-    margin-left: 390px;
+    margin-left: 600px;
     margin-top: 15px;    
   }
   .login-modal-image img{
@@ -37,7 +37,7 @@
     background-color: white;
     border-radius: 4px;
     padding: 20px;
-    margin-right: 29rem;
+    margin-right: 40rem;
   }
   .input-modal{
       width: 100%;
@@ -164,7 +164,7 @@
   
     .input-wrapper {
       width: 70%;
-      margin-right: 12rem;
+      margin-right: 22rem;
       margin-left: 12rem;
-    }
+    } 
   }

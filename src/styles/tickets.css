@@ -6,9 +6,9 @@ body {
     display: flex;
   }
   .ticket-container, .hotels-container{
-    max-width: 900px;
-    width: 92%;
-    margin: 20px auto 50px 20px;   
+    max-width: 1000px;
+    width: 100%;
+    margin: 10px auto 50px 20px;   
   }
   
   * {
@@ -21,7 +21,7 @@ body {
     text-align: left;    
   }
   .ticket-btn{
-    margin-left: 36rem;
+    margin-left: 42rem;
     background-color: #003290;
     border-radius: 80px;
   }
@@ -140,105 +140,6 @@ body {
     border-radius: 3px;
   }
   
-  /* responsive for mobile */
-  /* @media only screen and (max-width: 600px) {
-    .bp-card_label {
-      top: 0;
-      left: 0;
-      bottom: 0;
-      width: calc(100% - 40px);
-      margin-left: 20px;
-      height: 120px;
-      position: relative;
-    }
-  
-    .bp-card_label::after,
-    .bp-card_label::before {
-      transform: rotate(90deg);
-      transform-origin: top left;
-      width: 126px;
-      top: -2px;
-    }
-  
-    .bp-card_label::after {
-      left: 80px;
-      right: auto;
-    }
-  
-    .bp-card_label::before {
-      left: auto;
-      right: -146px;
-    }
-  
-    .bp-card_label .bd-border_dotted {
-      width: 100%;
-      border-top: 4px dashed #F0F0F0;
-      border-right: none;
-      height: 4px;
-      top: 92px;
-      left: 0;
-    }
-  
-    .bp-card_label .bd-border_solid {
-      width: 80%;
-      background: #FFAF96;
-      height: 3px;
-      top: 45px;
-      left: 10%;
-    }
-  
-    .bp-card_content {
-      margin-left: 0;
-      width: 100%;
-      padding: 3% 5% 5% 5%;
-    }
-  
-    .bp-card_content h4 {
-      font-size: 32px;
-      margin: 0;
-    }
-  
-    .bp-card_content ul {
-      margin: 20px 0 0 0;
-      padding: 0;
-    }
-  
-    .bp-card_content ul span {
-      display: block;
-      color: #A8A8A8;
-    }
-  
-    .bp-card_content ul li {
-      padding: 0;
-      display: inline-block;
-      width: 100%;
-      padding-right: 30px;
-      margin-bottom: 5px;
-    }
-  
-    .bp-card_content a.price {
-      position: relative;
-      width: 100%;
-      display: block;
-      margin: 0 auto;
-      top: auto;
-      right: auto;
-      margin-top: 20px;
-      text-align: center;
-    }
-  
-    .bp-card_content a.price:before {
-      content: "";
-      background: url('http://imgh.us/i-arrow.svg') center no-repeat;
-      background-size: contain;
-      position: absolute;
-      right: 22px;
-      top: 22px;
-      width: 20px;
-      height: 20px;
-    }
-  } */
-  
   /* Media queries for mobile and tablet */
 @media only screen and (max-width: 600px) {
   .ticket-btn {
@@ -347,11 +248,11 @@ body {
     height: 20px;
   }
 }
-
+ 
 /* Media query for tablets */
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   .ticket-btn {
-    margin-left: 19rem;
+    margin-left: 18rem;
   }
 
   .bp-card_content h4 {
@@ -368,5 +269,11 @@ body {
     top: 25px;
     right: 120px;
     padding: 8px;
+  }
+  .ticket-container, .hotels-container{
+    /* max-width: 1000px; */
+    width: 100%;
+    margin: 10px 500px 50px 20px;   
+    padding-right: 80px;
   }
 }

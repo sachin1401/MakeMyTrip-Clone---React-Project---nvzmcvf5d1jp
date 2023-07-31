@@ -28,6 +28,7 @@
 
 
 
+
 /* home page - travel cards headings */
 .seven h1 {
     text-align: center;
@@ -81,8 +82,8 @@
 
 .card {
   position: relative;
-  width: 250px;
-  height: 350px;
+  width: 350px;
+  height: 400px;
   margin: 10px; 
   border-radius: 10px;
   overflow: hidden;
@@ -119,16 +120,18 @@
 }
 
 .card__title {
-  font-size: 20px;
+  font-size: 24px;
   font-weight: bold;
   margin-bottom: 5px; 
+  padding: 5px;
 }
 
 .card__text {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 1.5;
   margin-bottom: 10px; 
   overflow: hidden;
+  padding: 5px;
 }
 
 .card__button {

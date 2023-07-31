@@ -1,16 +1,16 @@
 
 /* ***************** */
 /* flight section */
-.search-container {  
+.search-container {   
   background-color: #ffffff;
   border-radius: 0.5rem;  
   justify-content: center;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
 }
 .search-labelBox-border{
   margin: 2rem 1rem;
-  display: flex;
+  display: flex; 
   flex-wrap: wrap;
   justify-content: center;
 }
@@ -19,7 +19,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh; 
+  height: 35vh; 
   background-image: linear-gradient(rgb(9, 18, 68), #003290);
 }
 
@@ -70,6 +70,9 @@
   }
   .search-container-wrapper {
     height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
@@ -78,5 +81,8 @@
   .search-container {
     margin-left: 5rem;
     margin-right: 5rem;
+  }
+  .search-container-wrapper {
+    height: 40vh;
   }
 }

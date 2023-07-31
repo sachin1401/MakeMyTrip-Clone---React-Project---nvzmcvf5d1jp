@@ -11,13 +11,13 @@
     align-items: center;
   }
   .signup-custom-modal {
-    width: 22.5%;
+    width: 18%;
     /* max-width: 90%;  */
     height: 470px;
     background-color: white;
     padding: 20px;
     border-radius: 4px;
-    margin-left: 230px;
+    margin-left: 255px;
   }
   
 .signup-input-wrapper{
@@ -81,7 +81,7 @@
   .signup-custom-modal {
     width: 90%;
     margin: 0 auto;
-    height: 500px;
+    height: 500px; 
   }
 }
 
@@ -89,7 +89,7 @@
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .signup-custom-modal {
     width: 52%;
-    margin: 150px 300px;
-    margin-left: 20rem;
+    margin: 150px 550px;
+    margin-left: 24rem;
   }
 }

@@ -11,7 +11,7 @@ const TravelCard = () => {
         <Card
           title="Delhi"
           imageUrl="https://i.ibb.co/z4Jq1Bf/wallpaperflare-com-wallpaper-6.jpg"
-          description="Delhi is officially the National Capital Territory. It is a 1000-year-old structure."
+          description="Delhi is officially the National Capital Territory. It is a 1000-year-old structure. It is quite beautiful and attractive."
           link="https://ibb.co/NyScXJY"
         />
         <Card

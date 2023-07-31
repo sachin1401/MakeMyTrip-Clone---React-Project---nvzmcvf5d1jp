@@ -6,7 +6,6 @@ import { auth, provider } from "../firebase";
 import { useNavigate } from "react-router-dom";
 import SignupModal from "../LogInOutPage/Signup";
 import { useUserAuth } from "../context/UserAuthContext";
-import googleLogo from "../assets/gLogo.png";
 
 const Login = ({ isModalOpen, openModal, closeModal }) => {
   const [email, setEmail] = useState("");

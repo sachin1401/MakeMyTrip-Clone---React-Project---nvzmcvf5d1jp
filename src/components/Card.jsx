@@ -1,5 +1,4 @@
 import React from "react";
-import TravelCard from "./CardData";
 
 // Card component
 export const Card = ({ title, imageUrl, description, link }) => {

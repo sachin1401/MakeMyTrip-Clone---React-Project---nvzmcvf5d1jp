@@ -32,6 +32,11 @@ const CustomerReview = () => {
           name="Virat Kohli"
           review="From the restored 540 K Streamliner to the all-new S65 AMG Coupe to the Concept Coupe SUV, last weekend in Monterey was a celebration of the Mercedes-Benz coupe."
         />
+        <CustomerCard
+          imageUrl="http://media.npr.org/assets/news/2009/10/27/facebook1_sq-17f6f5e06d5742d8c53576f7c13d5cf7158202a9.jpg?s=16"
+          name="Ms Dhoni"
+          review="From the restored 540 K Streamliner to the all-new S65 AMG Coupe to the Concept Coupe SUV, last weekend in Monterey was a celebration of the Mercedes-Benz coupe."
+        />
       </div>
     </div>
   );
