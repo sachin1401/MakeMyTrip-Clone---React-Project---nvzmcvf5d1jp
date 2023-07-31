@@ -27,20 +27,20 @@ Here, I'm create a MakeMyTrip clone application using HTML, CSS, JavaScript, and
 
 ## Flights Section
 
-` The home page of the application, displaying input fields for user input and a list of available flight tickets fetched from an API.`
+` The home page of the application, displaying input fields for user input and a list of available flight tickets fetched from an data.js`
 
 ![Screenshot 2023-07-31 090406](https://github.com/sachin1401/MakeMyTrip-Clone---React-Project---nvzmcvf5d1jp/assets/85048630/f7643442-c745-42f3-bc96-1c724777149c)
 
 
 ## Hotels Section
 
-`A page with input fields for user input and a list of available hotels fetched from an API.`
+`A page with input fields for user input and a list of available hotels fetched from an data.js.`
 
 ![Screenshot 2023-07-31 090421](https://github.com/sachin1401/MakeMyTrip-Clone---React-Project---nvzmcvf5d1jp/assets/85048630/c2e174ac-1212-4a60-a6da-fc389722568d)
 
 ## Trains Section
 
-`A page with input fields for user input and a list of available train tickets fetched from an API.`
+`A page with input fields for user input and a list of available train tickets fetched from an data.js`
 
 ![Screenshot 2023-07-31 090448](https://github.com/sachin1401/MakeMyTrip-Clone---React-Project---nvzmcvf5d1jp/assets/85048630/f855764a-6ba5-4bb5-a79f-8ee953c0bc97)
 
