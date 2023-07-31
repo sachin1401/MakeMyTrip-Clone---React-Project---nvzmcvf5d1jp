@@ -17,7 +17,6 @@ Here, I'm create a MakeMyTrip clone application using HTML, CSS, JavaScript, and
 `A navigation section with a logo, navigation links for Flights, Hotels, and Trains, and a user icon displaying the user's name or "Login" if the user is not logged in.`
 
 ## Screenshots
-![App Screenshot](C:\Users\princ\Pictures\Screenshots\Screenshot 2023-06-26 231110.png)
 
 ## Search Section
 
