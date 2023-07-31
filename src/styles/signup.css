@@ -75,31 +75,21 @@
     justify-items: center;
 }
 
-/* Media query for mobile */
-@media only screen and (max-width: 767px) {
-    .signup-custom-modal{
-        margin-right: 260px;
-    }
-    .signup-email, .signup-password, .signup-fullname, .signup-btn, .log-in-box {
-        width: 100%;
-      }
-    .signup-input-wrapper{
-        width: 250px;
-    }
-    
-  }
 
-/* Media query for tablets */
-@media only screen and  (max-width: 1024px) {
-    .signup-custom-modal {
-      width: 100%;
-      margin-left: 280px;
-    }
-    
-    .sign-up-heading {
-      margin: 0;
-    }
-    .signup-email, .signup-password, .signup-fullname, .signup-btn, .log-in-box {
-      width: 100%;
-    }
+/* Mobile-specific styles */
+@media only screen and (max-width: 767px) {
+  .signup-custom-modal {
+    width: 90%;
+    margin: 0 auto;
+    height: 500px;
   }
+}
+
+/* Tablet-specific styles */
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .signup-custom-modal {
+    width: 52%;
+    margin: 150px 300px;
+    margin-left: 20rem;
+  }
+}

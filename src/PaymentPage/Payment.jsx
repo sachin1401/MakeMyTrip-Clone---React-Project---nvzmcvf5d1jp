@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/payment.css";
 import { NavLink } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Payment = () => {
   const location = useLocation();
@@ -15,18 +16,10 @@ const Payment = () => {
   const [cvv, setCvv] = useState("");
   const [paymentStatus, setPaymentStatus] = useState(null);
 
+  const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-
-    // Form validation
-    if (!cardNumber || !cardHolderName || !expiryMonth || !expiryYear || !cvv) {
-      alert("Please fill in all the required fields.");
-      return;
-    }
-
-    // You can perform any payment processing logic here
-    // For the sake of example, we'll just show a success message
-    setPaymentStatus("success");
+    navigate("/payment-status");
   };
 
   return (
@@ -41,6 +34,7 @@ const Payment = () => {
               type="text"
               value={cardNumber}
               onChange={(e) => setCardNumber(e.target.value)}
+              placeholder="1234-4567-8910-1112"
               required
             />
           </div>
@@ -52,6 +46,7 @@ const Payment = () => {
               type="text"
               value={cardHolderName}
               onChange={(e) => setCardHolderName(e.target.value)}
+              placeholder="Sachin Patel"
               required
             />
           </div>
@@ -113,6 +108,7 @@ const Payment = () => {
                       type="text"
                       value={cvv}
                       onChange={(e) => setCvv(e.target.value)}
+                      placeholder="123"
                     />
                   </td>
                 </tr>
@@ -123,17 +119,12 @@ const Payment = () => {
             <h2 className="total-price">Total Price: ₹{totalPrice}</h2>
           </div>
           <div className="flex-row">
-            <NavLink to="/payment-status">
-              <input className="card-submit" type="submit" value="Pay Now" />
-            </NavLink>
+            {/* <NavLink to="/payment-status"> */}
+            <input className="card-submit" type="submit" value="Pay Now" />
+            {/* </NavLink> */}
           </div>
         </form>
-        {/* {paymentStatus === "success" && (
-          <div className="payment-success">
-            <p>Payment Successful! Total Amount Paid: ₹{totalPrice}</p>
-            <button onClick={() => setPaymentStatus(null)}>Home</button>
-          </div>
-        )} */}
+
         <img
           className="card-image"
           src="https://pngimg.com/uploads/credit_card/credit_card_PNG99.png"
