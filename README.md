@@ -17,6 +17,7 @@ Here, I'm create a MakeMyTrip clone application using HTML, CSS, JavaScript, and
 `A navigation section with a logo, navigation links for Flights, Hotels, and Trains, and a user icon displaying the user's name or "Login" if the user is not logged in.`
 
 ## Screenshots
+![Screenshot 2023-06-26 231110](https://github.com/sachin1401/MakeMyTrip-Clone---React-Project---nvzmcvf5d1jp/assets/85048630/6411c1b1-54dc-45d3-9822-6b2a691b442a)
 
 ## Search Section
 
