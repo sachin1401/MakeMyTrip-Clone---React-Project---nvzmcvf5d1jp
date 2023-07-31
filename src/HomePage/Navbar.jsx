@@ -89,7 +89,12 @@ export const Navbar = (props) => {
             <div className="userContainer">
               <h5>{user && `Welcome ${user.displayName}`}</h5>
             </div>
-            <img className="userLogo navIcon" src={userLogo} alt="user-icon" />
+            <img
+              className="userLogo navIcon"
+              src={userLogo}
+              alt="user-icon"
+              onClick={handleLogout}
+            />
             <button className="logInBtn" onClick={handleLogout}>
               LOGOUT
             </button>
@@ -101,6 +106,7 @@ export const Navbar = (props) => {
                 className="userLogo navIcon"
                 src={userLogo}
                 alt="user-icon"
+                onClick={openModal}
               />
               <button className="logInBtn" onClick={openModal}>
                 LOGIN
