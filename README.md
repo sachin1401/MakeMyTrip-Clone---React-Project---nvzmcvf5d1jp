@@ -8,8 +8,7 @@ Here, I'm create a MakeMyTrip clone application using HTML, CSS, JavaScript, and
 
 - HTML
 - CSS
-- Javascript
-- React
+- React Js
 
 
 ## Nav bar
