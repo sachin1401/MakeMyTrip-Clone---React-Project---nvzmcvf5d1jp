@@ -20,6 +20,7 @@ const Login = ({ isModalOpen, openModal, closeModal }) => {
       .then((result) => {
         console.log("RESULT", result);
         const userName = result.user.displayName;
+        closeModal();
         navigate("/", {
           state: {
             userName,
@@ -96,10 +97,10 @@ const Login = ({ isModalOpen, openModal, closeModal }) => {
               />
               <button className="continue-btn">CONTINUE</button>
               <p className="commonTextGrey">or login with</p>
-              <div className="google-box" onClick={handleLoginClick}>
-                {/* <img className="gLogo" src={googleLogo} alt="google logo" /> */}
+              {/* <div className="google-box" onClick={handleLoginClick}>
+                <img className="gLogo" src={googleLogo} alt="google logo" />
                 <h4 className="gName">Google</h4>
-              </div>
+              </div> */}
               <div className="signUpBox">
                 <h4 className="signUpLink">
                   {" "}
