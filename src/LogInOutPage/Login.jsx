@@ -15,22 +15,22 @@ const Login = ({ isModalOpen, openModal, closeModal }) => {
   const navigate = useNavigate();
   const [isSignUpModalOpen, setSignUpModalOpen] = useState(false);
 
-  // const handleLoginClick = () => {
-  //   signInWithPopup(auth, provider)
-  //     .then((result) => {
-  //       console.log("RESULT", result);
-  //       const userName = result.user.displayName;
-  //       navigate("/", {
-  //         state: {
-  //           userName,
-  //         },
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       console.log("ERROR", error);
-  //     });
-  //   // console.log("Login btn clicked");
-  // };
+  const handleLoginClick = () => {
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        console.log("RESULT", result);
+        const userName = result.user.displayName;
+        navigate("/", {
+          state: {
+            userName,
+          },
+        });
+      })
+      .catch((error) => {
+        console.log("ERROR", error);
+      });
+    // console.log("Login btn clicked");
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -96,7 +96,7 @@ const Login = ({ isModalOpen, openModal, closeModal }) => {
               />
               <button className="continue-btn">CONTINUE</button>
               <p className="commonTextGrey">or login with</p>
-              <div className="google-box">
+              <div className="google-box" onClick={handleLoginClick}>
                 {/* <img className="gLogo" src={googleLogo} alt="google logo" /> */}
                 <h4 className="gName">Google</h4>
               </div>

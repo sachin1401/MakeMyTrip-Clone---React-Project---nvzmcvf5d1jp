@@ -17,7 +17,3 @@ const PaymentStatus = ({ totalPrice }) => {
 };
 
 export default PaymentStatus;
-
-{
-  /* <p>Payment Successful! Total Amount Paid: ₹{totalPrice}</p> */
-}
