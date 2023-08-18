@@ -1,9 +1,14 @@
 import React from "react";
+import { useState } from "react";
 import { useCart } from "react-use-cart";
 import "../styles/Cart.css";
 import { NavLink } from "react-router-dom";
+import { useUserAuth } from "../context/UserAuthContext";
+import Login from "../LogInOutPage/Login";
 
 const Cart = () => {
+  const { user } = useUserAuth();
+
   const {
     isEmpty,
     totalUniqueItems,
@@ -14,6 +19,16 @@ const Cart = () => {
     removeItem,
     emptyCart,
   } = useCart();
+
+  const [isLoginModalOpen, setLoginModalOpen] = useState(false); // Add state for login modal
+
+  const openLoginModal = () => {
+    setLoginModalOpen(true);
+  };
+
+  const closeLoginModal = () => {
+    setLoginModalOpen(false);
+  };
 
   if (isEmpty) return <h1 className="empty-cart">Your Cart is Empty</h1>;
 
@@ -69,10 +84,26 @@ const Cart = () => {
             <button className="clear-cart-btn" onClick={() => emptyCart()}>
               Clear Cart
             </button>
-            <NavLink to={`/payment?total=${cartTotal.toFixed(2)}`}>
+
+            {user ? ( // Check if user is logged in
+              <NavLink to={`/payment?total=${cartTotal.toFixed(2)}`}>
+                <button className="buy-now-btn">Buy Now</button>
+              </NavLink>
+            ) : (
+              <button className="buy-now-btn" onClick={openLoginModal}>
+                Buy Now
+              </button>
+            )}
+
+            {/* <NavLink to={`/payment?total=${cartTotal.toFixed(2)}`}>
               <button className="buy-now-btn">Buy Now</button>
-            </NavLink>
+            </NavLink> */}
           </div>
+          <Login
+            isModalOpen={isLoginModalOpen}
+            openModal={openLoginModal}
+            closeModal={closeLoginModal}
+          />
         </div>
       </div>
     </div>
