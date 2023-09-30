@@ -11,9 +11,10 @@
   font-weight: bold;
   margin-bottom: 20px;
   margin-top: 5rem;
-  background-color: #343a40;
+  background-color: #091244;
   border-radius: 0.5rem;
   padding: 2rem;
+  border: 1px solid red;
   color: white;
 }
 
@@ -39,8 +40,9 @@
   display: flex;
   align-items: center;
   margin-bottom: 10px;
-
- 
+  border-bottom: 2px solid #6b6c6e; 
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 
 .product-title {
@@ -93,8 +95,20 @@
 
 .total-price {
   font-size: 24px;
-  margin-bottom: 20px;color: #ff5b5c;
+  margin-bottom: 20px;
+  color: rgb(9, 18, 68);
+  border-bottom: 2px solid rgb(9, 18, 68);
+  border-top: 2px solid rgb(9, 18, 68);
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
+.price-color{
+  color: #ff5b5c;
+}
+/* .section-divide{
+  border-bottom: 1px solid rgb(9, 18, 68);
+  padding-left: 100px;
+} */
 
 .btns-cart {
   display: flex;

@@ -5,13 +5,12 @@ import flightLogo from "../assets/travel.png";
 import hotelLogo from "../assets/hotel.png";
 import trainLogo from "../assets/train.png";
 import userLogo from "../assets/user.png";
-import logoutLogo from "../assets/logout.png";
 import cartLogo from "../assets/Cart.png";
 import "../styles/homePage.css";
 import "../styles/customerReview.css";
 import Login from "../LogInOutPage/Login";
 import { useUserAuth } from "../context/UserAuthContext";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 // import cart2Logo from "../assets/cart2.png";
 

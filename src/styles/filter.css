@@ -1,6 +1,6 @@
 /* General styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif; 
     margin: 0;
     padding: 0;
   }
@@ -10,7 +10,7 @@ body {
     width: 280px;
     height: 700px;
     padding: 20px;
-    margin-left: 20rem;
+    margin-left: auto;
     margin-top: 2.5rem;
     border: 1px solid #e0e0e0;
     background: white;

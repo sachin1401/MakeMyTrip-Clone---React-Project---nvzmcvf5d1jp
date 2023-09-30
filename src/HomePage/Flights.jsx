@@ -49,6 +49,15 @@ export const Flights = () => {
     setShowCart(false); // Hide the cart when applying filters
   };
 
+  const clearFilters = () => {
+    setFromFilter("");
+    setToFilter("");
+    setDepartureFilter("");
+    setReturnFilter("");
+    setFilteredFlights(flights); // Reset filtered flights to original data
+    setShowCart(false);
+  };
+
   return (
     <div>
       <div className="search-container-wrapper">
@@ -56,28 +65,40 @@ export const Flights = () => {
           <div className="search-labelBox-border">
             <div className="search-labelBox">
               <label htmlFor="from">From:</label>
-              <input
-                type="text"
+              <select
                 id="from"
                 className="search-labelBox-size"
                 value={fromFilter}
                 onChange={(e) => setFromFilter(e.target.value)}
-              />
+              >
+                <option value="">Select City</option>
+                {flightData.map((flight) => (
+                  <option key={flight.id} value={flight.from}>
+                    {flight.from}
+                  </option>
+                ))}
+              </select>
             </div>
             <div className="search-labelBox">
               <label htmlFor="to">To:</label>
-              <input
-                type="text"
+              <select
                 id="to"
                 className="search-labelBox-size"
                 value={toFilter}
                 onChange={(e) => setToFilter(e.target.value)}
-              />
+              >
+                <option value="">Select City</option>
+                {flightData.map((flight) => (
+                  <option key={flight.id} value={flight.to}>
+                    {flight.to}
+                  </option>
+                ))}
+              </select>
             </div>
             <div className="search-labelBox">
               <label htmlFor="departure">Departure:</label>
               <input
-                type="text"
+                type="date"
                 id="departure"
                 className="search-labelBox-size"
                 value={departureFilter}
@@ -87,7 +108,7 @@ export const Flights = () => {
             <div className="search-labelBox">
               <label htmlFor="return">Return:</label>
               <input
-                type="text"
+                type="date"
                 id="return"
                 className="search-labelBox-size"
                 value={returnFilter}
@@ -97,6 +118,7 @@ export const Flights = () => {
           </div>
           <div className="search-button-container">
             <button onClick={applyFilters}>Search</button>
+            <button onClick={clearFilters}>Clear Filter</button>
           </div>
         </div>
       </div>

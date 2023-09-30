@@ -1,25 +1,26 @@
-
-/* ***************** */
-/* flight section */
-.search-container {   
+/* Common styles for all devices */
+.search-container {
   background-color: #ffffff;
-  border-radius: 0.5rem;  
+  border-radius: 0.5rem;
   justify-content: center;
-  margin-left: 5rem;
-  margin-right: 5rem;
+  margin: 0 5rem; /* Adjust margins as needed */
 }
-.search-labelBox-border{
-  margin: 2rem 1rem;
-  display: flex; 
+
+.search-labelBox-border {
+  margin: 2rem 3rem;
+  display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  /* border: 2px solid red; */
 }
 
 .search-container-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 35vh; 
+  height: auto;
+  /* border: 2px solid red; */
+  padding: 10px;
   background-image: linear-gradient(rgb(9, 18, 68), #003290);
 }
 
@@ -28,61 +29,61 @@
   flex-direction: column;
   font-size: large;
   gap: 5px;
-  padding: 1rem;
+  padding: 2rem;
   border: 1px solid rgb(232, 232, 232);
+  /* border: 2px solid red; */
+  width: 250px;
 }
-.search-labelBox label{
-  font-size:smaller;
+
+.search-labelBox label {
+  font-size: smaller;
 }
-.search-labelBox-size{
+
+.search-labelBox-size {
   height: 40px;
-  width: 60px; 
-  font-size: 50pt;
-  font-weight: bolder;
+  width: auto;
+  font-size: 15pX;
+  /* font-weight: bold; */
 }
+
 .search-labelBox input[type="text"] {
-  width: 220px;
+  width: 100%; /* Use 100% width to adapt to different screens */
   padding: 8px;
   font-size: 16px;
-  border: 0;
-  background-color: whitesmoke;
+  border: 0.5;
+  /* background-color: whitesmoke; */
   outline: 0;
 }
+
 .search-button-container {
   width: 100%;
   display: flex;
   justify-content: center;
   padding-bottom: 1rem;
+  /* border: 2px solid red; */
 }
 
 .search-button-container button {
-  background-color: rgb(9, 18, 68);  
+  background-color: rgb(9, 18, 68);
   border-radius: 80px;
 }
-.flight-container , .hotels-container{
+.search-button-container button:last-child {
+  background-color: red;
+  color: #000000;
+  margin-left: 10px;
+}
+
+.flight-container, .hotels-container {
   position: relative;
 }
 
-/* Media queries for mobile */
-@media only screen and (max-width: 767px) {
+/* Media query for screens smaller than a specific width (adjust the width as needed) */
+@media (max-width: 768px) {
   .search-container {
-    margin: 1rem;
+    margin: 0 2rem; /* Adjust margins for smaller screens */
   }
-  .search-container-wrapper {
-    height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-}
 
-/* Media queries for tablet */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
-  .search-container {
-    margin-left: 5rem;
-    margin-right: 5rem;
-  }
-  .search-container-wrapper {
-    height: 40vh;
+  .search-labelBox {
+    font-size: medium; /* Adjust font size for smaller screens */
   }
 }

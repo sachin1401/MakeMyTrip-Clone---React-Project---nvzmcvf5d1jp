@@ -1,10 +1,10 @@
 import React from "react";
-import { useState } from "react";
 import { useCart } from "react-use-cart";
 import "../styles/Cart.css";
 import { NavLink } from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext";
 import Login from "../LogInOutPage/Login";
+import { useState } from "react";
 
 const Cart = () => {
   const { user } = useUserAuth();
@@ -74,12 +74,17 @@ const Cart = () => {
                     Remove Item
                   </button>
                 </div>
+                <br />
+                {/* <div className="section-divide">ggg</div> */}
               </div>
             );
           })}
         </div>
         <div className="cart-handles">
-          <h2 className="total-price">Total Price: ₹{cartTotal.toFixed(2)}</h2>
+          <h2 className="total-price">
+            Total Price:
+            <span className="price-color"> ₹{cartTotal.toFixed(2)}</span>{" "}
+          </h2>
           <div className="btns-cart">
             <button className="clear-cart-btn" onClick={() => emptyCart()}>
               Clear Cart

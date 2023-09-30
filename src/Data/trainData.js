@@ -12,7 +12,7 @@ const trainData = [
       price: "4500",
       train_number: "102531",
     },
-    {
+    { 
       id: 2,
       from: "Delhi",
       to: "Goa",

@@ -10,14 +10,15 @@ body {
 /* navbar - desigin */
 .nav-navbar {
     background-color: rgb(9, 18, 68);
-    padding: 1rem 10rem;
+    padding: 1% 10%;
     display: flex;
-    gap: 4rem;
+    gap: 6%; 
+    justify-content: center;
 }
 
 .website-logo {
     height: 3rem; 
-    padding-left: 10rem;
+    /* padding-left: 19%; */
 }
 
 .Logo {
@@ -25,21 +26,22 @@ body {
 }
 
 .UserLogo {
-    height: 2.5rem;
+    height: 2rem;
 }
 
-.userCart {
-    padding-left: 30rem;
-}
+/* .userCart {
+    padding-left: 20%;
+} */
 
 .cartLogo {
-    height: 2.6rem;
+    height: 2.1rem;
 }
 
 .nav-head-style {
     color: rgb(230, 227, 227);
     text-align: center;
 }
+
 
 /* Media Queries for Responsive Design */
 
@@ -48,33 +50,29 @@ body {
     .nav-navbar {
         flex-direction: column;
         align-items: center;
-        padding: 1rem;
+        padding: 1%;
     }
 
     .website-logo {
         padding-left: 0;
     }
 
-    .userCart {
-        padding-left: 0;
-    }
+ 
 }
 
 /* Tablets */
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+@media only screen and (min-width: 768px) and (max-width: 923px) {
     .nav-navbar {
         flex-direction: column;
         align-items: center;
-        padding: 1rem;
+        padding: 1%;
     }
 
     .website-logo {
         padding-left: 0;
     }
-
-    .userCart {
-        padding-left: 0;
-    }
+  
+  
 }
 
 

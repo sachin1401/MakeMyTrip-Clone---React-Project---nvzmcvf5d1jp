@@ -60,6 +60,14 @@ export const Hotels = () => {
 
     setFilteredHotels(filteredData);
   };
+  const clearFilters = () => {
+    setFromFilter("");
+    setToFilter("");
+    setDepartureFilter("");
+    setReturnFilter("");
+    setFilteredHotels(hotels); // Reset filtered flights to original data
+    setShowCart(false);
+  };
 
   return (
     <div>
@@ -67,19 +75,25 @@ export const Hotels = () => {
         <div className="search-container">
           <div className="search-labelBox-border">
             <div className="search-labelBox">
-              <label htmlFor="from">City:</label>
-              <input
-                type="text"
-                id="from"
+              <label htmlFor="city">City:</label>
+              <select
+                id="city"
                 className="search-labelBox-size"
                 value={fromFilter}
                 onChange={(e) => setFromFilter(e.target.value)}
-              />
+              >
+                <option value="">Select City</option>
+                {hotelData.map((hotel) => (
+                  <option key={hotel.id} value={hotel.city}>
+                    {hotel.city}
+                  </option>
+                ))}
+              </select>
             </div>
             <div className="search-labelBox">
               <label htmlFor="to">Check-In:</label>
               <input
-                type="text"
+                type="date"
                 id="to"
                 className="search-labelBox-size"
                 value={toFilter}
@@ -89,7 +103,7 @@ export const Hotels = () => {
             <div className="search-labelBox">
               <label htmlFor="departure">Check-Out:</label>
               <input
-                type="text"
+                type="date"
                 id="departure"
                 className="search-labelBox-size"
                 value={departureFilter}
@@ -98,17 +112,24 @@ export const Hotels = () => {
             </div>
             <div className="search-labelBox">
               <label htmlFor="return">Guests:</label>
-              <input
-                type="text"
+              <select
                 id="return"
                 className="search-labelBox-size"
                 value={returnFilter}
                 onChange={(e) => setReturnFilter(e.target.value)}
-              />
+              >
+                <option value="">Number Of Guest</option>
+                {hotelData.map((hotel) => (
+                  <option key={hotel.id} value={hotel.guests}>
+                    {hotel.guests}
+                  </option>
+                ))}
+              </select>
             </div>
           </div>
           <div className="search-button-container">
             <button onClick={applyFilters}>Search</button>
+            <button onClick={clearFilters}>Clear Filter</button>
           </div>
         </div>
       </div>

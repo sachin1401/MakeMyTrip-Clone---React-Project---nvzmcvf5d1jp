@@ -15,23 +15,22 @@ const Login = ({ isModalOpen, openModal, closeModal }) => {
   const navigate = useNavigate();
   const [isSignUpModalOpen, setSignUpModalOpen] = useState(false);
 
-  const handleLoginClick = () => {
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        console.log("RESULT", result);
-        const userName = result.user.displayName;
-        closeModal();
-        navigate("/", {
-          state: {
-            userName,
-          },
-        });
-      })
-      .catch((error) => {
-        console.log("ERROR", error);
-      });
-    // console.log("Login btn clicked");
-  };
+  // const handleLoginClick = () => {
+  //   signInWithPopup(auth, provider)
+  //     .then((result) => {
+  //       console.log("RESULT", result);
+  //       const userName = result.user.displayName;
+  //       closeModal();
+  //       navigate("/", {
+  //         state: {
+  //           userName,
+  //         },
+  //       });
+  //     })
+  //     .catch((error) => {
+  //       console.log("ERROR", error);
+  //     });
+  // };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");

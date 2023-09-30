@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Modal from "react-modal";
 import "../styles/signup.css";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useUserAuth } from "../context/UserAuthContext.jsx";
 
 const Signup = ({ isSignUpModalOpen, closeSignUpModal, openLoginModal }) => {

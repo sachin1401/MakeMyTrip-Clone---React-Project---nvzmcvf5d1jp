@@ -1,0 +1,54 @@
+/* Common styles for both desktop and mobile */
+.nav-navbar {
+    background-color: rgb(9, 18, 68);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1rem; /* Adjust padding for smaller screens */
+  }
+  
+  /* Styles for the logo images */
+  .Logo,
+  .userCart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .Logo img,
+  .userCart img {
+    height: 2rem;
+  }
+  
+  /* Styles for the user container */
+  .userContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Media query for screens larger than a specific width (adjust the width as needed) */
+  @media (min-width: 768px) {
+    .nav-navbar {
+      padding: 1rem 10rem; /* Restore desktop padding */
+    }
+  
+    .userCart {
+      padding-left: 30rem; /* Restore desktop padding */
+    }
+  
+    /* Reset the styles for logo images and user container for desktop */
+    .Logo,
+    .userCart {
+      flex-direction: row;
+    }
+  
+    .Logo img,
+    .userCart img {
+      height: 3rem; /* Adjust the height as needed */
+    }
+  
+    .userContainer {
+      display: none; /* Hide user container on desktop */
+    }
+  }
+  

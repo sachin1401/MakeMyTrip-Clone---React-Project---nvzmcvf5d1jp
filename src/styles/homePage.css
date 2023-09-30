@@ -6,16 +6,16 @@
   cursor: pointer;
 }
 
-.navIcon {
-  width: 35px;
-  height: 35px;
+.navIcon { 
+  width: 31px;
+  height: 31px;
   text-align: center;
 }
 
 .logInBtn {
   color: white;
   padding: 2px 4px;
-  font-size: small;
+  font-size: 12px;
 }
 
 .userContainer {
@@ -161,7 +161,7 @@
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
   .card {
       width: 48%;
-      max-width: 300px;
+      max-width: 400px;
   }
 }
 
@@ -246,5 +246,6 @@
             margin-left: 1rem; 
             margin-right: 1rem; 
             text-align: left;
+            font-size: small;
         }
       }

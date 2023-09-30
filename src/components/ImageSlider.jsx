@@ -10,19 +10,19 @@ import "../styles/ImageSlider.css";
 const slideImages = [
   {
     url: newTravel2,
-    caption: "BOB",
+    caption: "img1",
   },
   {
     url: newTravel3,
-    caption: "Men's Clothing",
+    caption: "img2",
   },
   {
     url: newTravel4,
-    caption: "Kitchen Tools",
+    caption: "img3",
   },
   {
     url: newTravel6,
-    caption: "Kurtis",
+    caption: "img4",
   },
 ];
 
