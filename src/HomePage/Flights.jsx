@@ -7,8 +7,11 @@ import { useCart } from "react-use-cart";
 import { CartProvider } from "react-use-cart";
 import Fliter from "../components/Filter";
 import Footer from "../HomePage/Footer";
+import Login from "../LogInOutPage/Login";
+import { useUserAuth } from "../context/UserAuthContext";
 
 export const Flights = () => {
+  const { user } = useUserAuth();
   const { addItem } = useCart();
   const [flights, setFlights] = useState(flightData);
   const [filteredFlights, setFilteredFlights] = useState(flightData);
@@ -17,6 +20,15 @@ export const Flights = () => {
   const [departureFilter, setDepartureFilter] = useState("");
   const [returnFilter, setReturnFilter] = useState("");
   const [showCart, setShowCart] = useState(false);
+  const [isLoginModalOpen, setLoginModalOpen] = useState(false); // Add state for login modal
+
+  const openLoginModal = () => {
+    setLoginModalOpen(true);
+  };
+
+  const closeLoginModal = () => {
+    setLoginModalOpen(false);
+  };
 
   const applyFilters = () => {
     const filteredData = flights.filter((flight) => {
@@ -133,46 +145,61 @@ export const Flights = () => {
           />
 
           <div className="ticket-container">
-            {filteredFlights.map((flight, index) => (
-              <div
-                key={flight.id || index}
-                className="bp-card"
-                data-clickthrough="link"
-              >
-                <div className="bp-card_label">
-                  <div className="bd-border_solid"></div>
-                  <div className="bd-border_dotted"></div>
+            {filteredFlights.length === 0 ? (
+              <div className="not-available-message">Not Available</div>
+            ) : (
+              filteredFlights.map((flight, index) => (
+                <div
+                  key={flight.id || index}
+                  className="bp-card"
+                  data-clickthrough="link"
+                >
+                  <div className="bp-card_label">
+                    <div className="bd-border_solid"></div>
+                    <div className="bd-border_dotted"></div>
+                  </div>
+                  <div className="bp-card_content">
+                    <p className="secondary">Flight ticket</p>
+                    <h4>{flight.airlineName}</h4>
+                    <table className="ticket-data">
+                      <tbody>
+                        <tr>
+                          <th>{flight.departure.departureTime}</th>
+                          <th>{flight.duration}</th>
+                          <th>{flight.return.returnTime}</th>
+                        </tr>
+                        <tr>
+                          <td>{flight.from}</td>
+                          <td></td>
+                          <td>{flight.to}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    {user ? (
+                      <button
+                        className="ticket-btn"
+                        onClick={() => addItem(flight)}
+                      >
+                        Book
+                      </button>
+                    ) : (
+                      <button className="ticket-btn" onClick={openLoginModal}>
+                        Book
+                      </button>
+                    )}
+                    <a href="" className="price">
+                      ₹ {flight.price}
+                    </a>{" "}
+                  </div>
                 </div>
-                <div className="bp-card_content">
-                  <p className="secondary">Flight ticket</p>
-                  <h4>{flight.airlineName}</h4>
-                  <table className="ticket-data">
-                    <tbody>
-                      <tr>
-                        <th>{flight.departure.departureTime}</th>
-                        <th>{flight.duration}</th>
-                        <th>{flight.return.returnTime}</th>
-                      </tr>
-                      <tr>
-                        <td>{flight.from}</td>
-                        <td></td>
-                        <td>{flight.to}</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <button
-                    className="ticket-btn"
-                    onClick={() => addItem(flight)}
-                  >
-                    Book
-                  </button>
-                  <a href="" className="price">
-                    ₹ {flight.price}
-                  </a>
-                </div>
-              </div>
-            ))}
+              ))
+            )}
           </div>
+          <Login
+            isModalOpen={isLoginModalOpen}
+            openModal={openLoginModal}
+            closeModal={closeLoginModal}
+          />
         </div>
         <Footer />
       </CartProvider>

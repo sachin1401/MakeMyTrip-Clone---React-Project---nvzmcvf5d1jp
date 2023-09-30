@@ -7,8 +7,11 @@ import trainData from "../Data/trainData";
 import { CartProvider } from "react-use-cart";
 import TrainFilter from "../components/TrainFilter";
 import Footer from "../HomePage/Footer";
+import Login from "../LogInOutPage/Login";
+import { useUserAuth } from "../context/UserAuthContext";
 
 export const Trains = () => {
+  const { user } = useUserAuth();
   const { addItem } = useCart();
   const [trains, setTrains] = useState(trainData);
   const [filteredTrains, setFilteredTrains] = useState(trainData);
@@ -19,6 +22,15 @@ export const Trains = () => {
   const [showCart, setShowCart] = useState(false);
   const [trainTypeFilter, setTrainTypeFilter] = useState([]);
   const [priceRangeFilter, setPriceRangeFilter] = useState("");
+  const [isLoginModalOpen, setLoginModalOpen] = useState(false); // Add state for login modal
+
+  const openLoginModal = () => {
+    setLoginModalOpen(true);
+  };
+
+  const closeLoginModal = () => {
+    setLoginModalOpen(false);
+  };
 
   const applyFilters = () => {
     const filteredData = trains.filter((train) => {
@@ -132,43 +144,61 @@ export const Trains = () => {
           />
 
           <div className="ticket-container">
-            {filteredTrains.map((train, index) => (
-              <div
-                key={train.id || index}
-                className="bp-card"
-                data-clickthrough="link"
-              >
-                <div className="bp-card_label">
-                  <div className="bd-border_solid"></div>
-                  <div className="bd-border_dotted"></div>
+            {filteredTrains.length === 0 ? (
+              <div className="not-available-message">Not Available</div>
+            ) : (
+              filteredTrains.map((train, index) => (
+                <div
+                  key={train.id || index}
+                  className="bp-card"
+                  data-clickthrough="link"
+                >
+                  <div className="bp-card_label">
+                    <div className="bd-border_solid"></div>
+                    <div className="bd-border_dotted"></div>
+                  </div>
+                  <div className="bp-card_content">
+                    <p className="secondary">Train ticket</p>
+                    <h4>{train.train_number}</h4>
+                    <table className="ticket-data">
+                      <tbody>
+                        <tr>
+                          <th>{train.departure.departureDate}</th>
+                          <th>{train.duration}</th>
+                          <th>{train.departure.departureTime}</th>
+                        </tr>
+                        <tr>
+                          <td>{train.from}</td>
+                          <td>{train.kilometers}km</td>
+                          <td>{train.to}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    {user ? (
+                      <button
+                        className="ticket-btn"
+                        onClick={() => addItem(train)}
+                      >
+                        Book
+                      </button>
+                    ) : (
+                      <button className="ticket-btn" onClick={openLoginModal}>
+                        Book
+                      </button>
+                    )}
+                    <a href="" className="price">
+                      ₹ {train.price}
+                    </a>
+                  </div>
                 </div>
-                <div className="bp-card_content">
-                  <p className="secondary">Train ticket</p>
-                  <h4>{train.train_number}</h4>
-                  <table className="ticket-data">
-                    <tbody>
-                      <tr>
-                        <th>{train.departure.departureDate}</th>
-                        <th>{train.duration}</th>
-                        <th>{train.departure.departureTime}</th>
-                      </tr>
-                      <tr>
-                        <td>{train.from}</td>
-                        <td>{train.kilometers}km</td>
-                        <td>{train.to}</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <button className="ticket-btn" onClick={() => addItem(train)}>
-                    Book
-                  </button>
-                  <a href="" className="price">
-                    ₹ {train.price}
-                  </a>
-                </div>
-              </div>
-            ))}
+              ))
+            )}
           </div>
+          <Login
+            isModalOpen={isLoginModalOpen}
+            openModal={openLoginModal}
+            closeModal={closeLoginModal}
+          />
         </div>
         <Footer />
       </CartProvider>

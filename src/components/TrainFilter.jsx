@@ -5,7 +5,9 @@ const TrainFilter = ({ handleFilter }) => {
   const [selectedPriceRange, setSelectedPriceRange] = useState("");
 
   const handlePriceRangeChange = (priceRange) => {
-    setSelectedPriceRange(priceRange);
+    setSelectedPriceRange((prevPriceRange) =>
+      prevPriceRange === priceRange ? "" : priceRange
+    );
   };
 
   useEffect(() => {

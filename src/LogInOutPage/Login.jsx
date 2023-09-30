@@ -15,22 +15,6 @@ const Login = ({ isModalOpen, openModal, closeModal }) => {
   const navigate = useNavigate();
   const [isSignUpModalOpen, setSignUpModalOpen] = useState(false);
 
-  // const handleLoginClick = () => {
-  //   signInWithPopup(auth, provider)
-  //     .then((result) => {
-  //       console.log("RESULT", result);
-  //       const userName = result.user.displayName;
-  //       closeModal();
-  //       navigate("/", {
-  //         state: {
-  //           userName,
-  //         },
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       console.log("ERROR", error);
-  //     });
-  // };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -65,17 +49,17 @@ const Login = ({ isModalOpen, openModal, closeModal }) => {
       >
         {/* <Login/> */}
         {/* Add your login form here */}
-        <div className="login-modal-image">
+        {/* <div className="login-modal-image">
           <img
             src="https://imgak.mmtcdn.com/pwa_v3/pwa_header_assets/loginPersuassionRoad.webp"
             alt="road image"
           />
-        </div>
+        </div> */}
 
         <div className="input-wrapper">
           <div className="input-modal">
             <div className="login-heading-box">
-              <p className="log-sign-heading">Login/Sign Up</p>
+              <p className="log-sign-heading">LogIn</p>
               <button onClick={closeModal} className="closeBtn">
                 ❌
               </button>
@@ -95,7 +79,7 @@ const Login = ({ isModalOpen, openModal, closeModal }) => {
                 onChange={(e) => setPassword(e.target.value)}
               />
               <button className="continue-btn">CONTINUE</button>
-              <p className="commonTextGrey">or login with</p>
+              {/* <p className="commonTextGrey">or login with</p> */}
               {/* <div className="google-box" onClick={handleLoginClick}>
                 <img className="gLogo" src={googleLogo} alt="google logo" />
                 <h4 className="gName">Google</h4>

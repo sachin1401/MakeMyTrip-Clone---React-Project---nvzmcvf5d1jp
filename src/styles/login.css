@@ -1,170 +1,129 @@
-/* Modal.css */
 .custom-modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5); 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .custom-modal {
-    height: 500px;
-    padding: 20px;
-    display: flex;
-  }
-  .login-modal-image{
-    width: 30%;
-    flex: 1;
-    margin-left: 600px;
-    margin-top: 15px;    
-  }
-  .login-modal-image img{
-    height: 420px;
-    width: auto;
-    border-radius: 5px;
-  }
-  
-  /* login css */
-  .input-wrapper{
-    width: 70%;
-    display: flex;
-    flex: 1;
-    justify-items: center;
-    justify-content: center;
-    background-color: white;
-    border-radius: 4px;
-    padding: 20px;
-    margin-right: 40rem;
-  }
-  .input-modal{
-      width: 100%;
-      padding: 10px;
-      font: 12px font-regular;
-      background-color: #FFFFFF;
-      color: #000000;
-  }
-  .login-heading-box{
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 10px;
-  }
-  .closeBtn{
-      padding: 5px;
-      border: none;
-      background-color: #fff;
-      cursor: pointer;
-  }
-  .log-sign-heading{
-      font-size: 17px;
-      color: #333333;
-      font-weight: bolder;
-  }
-  .description{
-      margin: 10px 0px 0px 10px;
-      color: #333333;
-      text-align: center;
-  }
-  
-  .signin-input-email,.signin-input-password{
-      width: 100%;
-      height: 40px;
-      padding: 0 0 0 15px;
-      background: #FFFFFF;
-      border: 1px solid #091244;
-      border-radius: 5px;
-  }
-  .continue-btn{
-      margin: 0px 0 5px;
-      padding: 1px 8px;
-      height: 40px;
-      width: 100%;
-      background-color: #091244;
-      color: #FFFFFF;
-      border: none;
-      border-radius: 4px;
-      cursor: pointer;
-  }
-  .commonTextGrey{
-      font-size: 14px;
-      color: #BBBBBB;
-      margin: 0px 50px 10px 88px;
-  }
-  .google-box{
-      cursor: pointer;
-      width: 90%;
-      height: 40px;
-      border: 1px solid #091244;
-      border-radius: 50px;
-      color: #091244;
-      display: flex;
-      margin-left: 1rem;
-  }
-  
-  .gLogo{
-      padding: 10px; 
-      width: 20px;
-      height: 20px;
-  }
-  .gName{
-      margin-left: 78px;
-      padding: 10px; 
-      font-size: 14px;
-  }
-  .signUpBox{
-      margin-top: 10px;
-      width: 90%;
-      height: 40px;
-      text-align: center;
-      border: 1px solid #091244;
-      border-radius: 50px;
-      color: #091244;
-      display: flex;
-      margin-left: 1rem;
-  }
-  .signUpLink{
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      justify-items: center;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-/* Mobile-specific styles */
-@media only screen and (max-width: 767px) {
-    .custom-modal {
-      flex-direction: column;
-      height: auto;
-      max-height: 100vh;
-      margin: 10px;
-    }
-  
-    .login-modal-image {
-      display: none;
-    }
-  
-    .input-wrapper {
-      width: 100%;
-      margin-right: 0;
-    }
-  }
-  
-  /* Tablet-specific styles */
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    .custom-modal {
-      flex-direction: row;
-    }
-  
-    .login-modal-image {
-     display: none;
-    }
-  
-    .input-wrapper {
-      width: 70%;
-      margin-right: 22rem;
-      margin-left: 12rem;
-    } 
-  }
+.custom-modal {
+  width: 90%;
+  max-width: 600px; /* Set a maximum width for larger screens */
+  height: auto; /* Adjust height to "auto" for responsiveness */
+  display: flex;
+  flex-direction: column; /* Stack elements in a column for smaller screens */
+  align-items: center; /* Center elements horizontally */
+  padding: 20px;
+}
+
+.login-modal-image {
+  width: 100%; /* Take the full width for smaller screens */
+  max-width: 30%; /* Limit the image width */
+  margin-top: 15px;
+}
+
+.login-modal-image img {
+  width: 100%; /* Adjust image width for responsiveness */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 5px;
+}
+
+/* Login CSS */
+.input-wrapper {
+  width: 100%; /* Take the full width for smaller screens */
+  max-width: 70%; /* Limit the width for larger screens */
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  border-radius: 4px;
+  padding: 20px;
+  margin-right: 0; /* Remove the right margin for smaller screens */
+}
+
+.input-modal {
+  width: 100%; /* Take the full width for responsiveness */
+  padding: 10px;
+  font-size: 12px;
+  background-color: #FFFFFF;
+  color: #000000;
+}
+
+.login-heading-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.closeBtn {
+  padding: 5px;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.log-sign-heading {
+  font-size: 17px;
+  color: #333333;
+  font-weight: bolder;
+}
+
+.description {
+  margin: 10px 0 0 0; /* Adjust margins for better alignment */
+  color: #333333;
+  text-align: center;
+}
+
+.signin-input-email, .signin-input-password {
+  width: 100%;
+  height: 40px;
+  padding: 0 0 0 15px;
+  background: #FFFFFF;
+  border: 1px solid #091244;
+  border-radius: 5px;
+}
+
+.continue-btn {
+  margin: 10px 0 20px; /* Adjust margins for better spacing */
+  padding: 1px 8px;
+  height: 40px;
+  width: 100%; /* Take the full width for responsiveness */
+  background-color: #091244;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.commonTextGrey {
+  font-size: 14px;
+  color: #BBBBBB;
+  margin: 10px 0 0 0; /* Adjust margins for better alignment */
+  text-align: center; /* Center text for smaller screens */
+}
+
+.google-box, .signUpBox {
+  cursor: pointer;
+  width: 100%; /* Take the full width for responsiveness */
+  height: 40px;
+  border: 1px solid #091244;
+  border-radius: 50px;
+  color: #091244;
+  display: flex;
+}
+
+.gLogo, .gName {
+  padding: 10px;
+  font-size: 14px;
+}
+
+.signUpLink {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import "../styles/payment.css";
 import { useNavigate } from "react-router-dom";
@@ -13,13 +13,39 @@ const Payment = () => {
   const [expiryMonth, setExpiryMonth] = useState("");
   const [expiryYear, setExpiryYear] = useState("");
   const [cvv, setCvv] = useState("");
-  const [paymentStatus, setPaymentStatus] = useState(null);
+  // const [paymentStatus, setPaymentStatus] = useState(null);
+  const [paymentSuccess, setPaymentSuccess] = useState(false);
 
   const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/payment-status");
+
+    // Simulate a 2-second delay for the payment process
+    setTimeout(() => {
+      setPaymentSuccess(true);
+    }, 2000);
   };
+
+  // Use the useEffect hook to reset the payment success message and redirect
+  useEffect(() => {
+    if (paymentSuccess) {
+      // After 2 seconds, reset paymentSuccess to false and redirect to "payment-status"
+      const timer = setTimeout(() => {
+        setPaymentSuccess(false);
+        navigate("/payment-status"); // Redirect to the "payment-status" page
+      }, 2000);
+
+      // Clean up the timer to avoid memory leaks
+      return () => clearTimeout(timer);
+    }
+  }, [paymentSuccess, navigate]);
+
+  // const navigate = useNavigate();
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   navigate("/payment-status");
+  // };
 
   return (
     <div className="container">
@@ -59,6 +85,7 @@ const Payment = () => {
                       name="month"
                       id="month-select"
                       value={expiryMonth}
+                      maxlength="16"
                       onChange={(e) => setExpiryMonth(e.target.value)}
                     >
                       <option value="" disabled>
@@ -106,6 +133,7 @@ const Payment = () => {
                       className="card-cvv"
                       type="text"
                       value={cvv}
+                      maxlength="3"
                       onChange={(e) => setCvv(e.target.value)}
                       placeholder="123"
                     />
@@ -123,7 +151,9 @@ const Payment = () => {
             {/* </NavLink> */}
           </div>
         </form>
-
+        {paymentSuccess && (
+          <div className="payment-success-message">Payment Processing...</div>
+        )}
         <img
           className="card-image"
           src="https://pngimg.com/uploads/credit_card/credit_card_PNG99.png"

@@ -9,7 +9,7 @@
 .search-labelBox-border {
   margin: 2rem 3rem;
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: wrap; 
   justify-content: center;
   /* border: 2px solid red; */
 }
@@ -66,11 +66,21 @@
 .search-button-container button {
   background-color: rgb(9, 18, 68);
   border-radius: 80px;
+  transition: background-color 0.2s ease;
 }
 .search-button-container button:last-child {
-  background-color: red;
+  background-color: #ed3237;
   color: #000000;
   margin-left: 10px;
+  font-size: large;
+}
+.search-button-container button:hover {
+  background-color: #0f2f91; /* Change background color on hover */
+  color: #fff; /* Change text color on hover */
+}
+
+.search-button-container button:active {
+  background-color: #071746; /* Change background color on click (active state) */
 }
 
 .flight-container, .hotels-container {

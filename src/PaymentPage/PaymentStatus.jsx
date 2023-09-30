@@ -9,7 +9,7 @@ const PaymentStatus = ({ totalPrice }) => {
         <p>Payment Successful! Thankyou for booking.</p>
         <p>Visit again</p>
         <NavLink to="/">
-          <button>Home</button>
+          <button className="ps-btn">Home</button>
         </NavLink>
       </div>
     </div>

@@ -7,8 +7,11 @@ import { CartProvider } from "react-use-cart";
 import hotelData from "../Data/hotelData";
 import HotelFilter from "../components/hotelFilter";
 import Footer from "../HomePage/Footer";
+import Login from "../LogInOutPage/Login";
+import { useUserAuth } from "../context/UserAuthContext";
 
 export const Hotels = () => {
+  const { user } = useUserAuth();
   const { addItem } = useCart();
   const [filteredHotels, setFilteredHotels] = useState(hotelData);
   const [selectedPriceRange, setSelectedPriceRange] = useState("");
@@ -18,6 +21,15 @@ export const Hotels = () => {
   const [departureFilter, setDepartureFilter] = useState("");
   const [returnFilter, setReturnFilter] = useState("");
   const [showCart, setShowCart] = useState(false);
+  const [isLoginModalOpen, setLoginModalOpen] = useState(false); // Add state for login modal
+
+  const openLoginModal = () => {
+    setLoginModalOpen(true);
+  };
+
+  const closeLoginModal = () => {
+    setLoginModalOpen(false);
+  };
 
   useEffect(() => {
     const storedHotels = JSON.parse(localStorage.getItem("hotels"));
@@ -143,43 +155,61 @@ export const Hotels = () => {
           />
 
           <div className="hotels-container">
-            {filteredHotels.map((hotel, index) => (
-              <div
-                key={hotel.id || index}
-                className="bp-card"
-                data-clickthrough="link"
-              >
-                <div className="bp-card_label">
-                  <div className="bd-border_solid"></div>
-                  <div className="bd-border_dotted"></div>
+            {filteredHotels.length === 0 ? (
+              <div className="not-available-message">Not Available</div>
+            ) : (
+              filteredHotels.map((hotel, index) => (
+                <div
+                  key={hotel.id || index}
+                  className="bp-card"
+                  data-clickthrough="link"
+                >
+                  <div className="bp-card_label">
+                    <div className="bd-border_solid"></div>
+                    <div className="bd-border_dotted"></div>
+                  </div>
+                  <div className="bp-card_content">
+                    <p className="secondary">Hotel booking</p>
+                    <h4>{hotel.hotel_name}</h4>
+                    <table className="ticket-data">
+                      <tbody>
+                        <tr>
+                          <th>{hotel.check_in}</th>
+                          <th>{hotel.city}</th>
+                          <th>{hotel.check_out}</th>
+                        </tr>
+                        <tr>
+                          <td>{hotel.room_type}</td>
+                          <td></td>
+                          <td>{hotel.guests}</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                    {user ? (
+                      <button
+                        className="ticket-btn"
+                        onClick={() => addItem(hotel)}
+                      >
+                        Book
+                      </button>
+                    ) : (
+                      <button className="ticket-btn" onClick={openLoginModal}>
+                        Book
+                      </button>
+                    )}
+                    <a href="" className="price">
+                      ₹ {hotel.price}
+                    </a>
+                  </div>
                 </div>
-                <div className="bp-card_content">
-                  <p className="secondary">Hotel booking</p>
-                  <h4>{hotel.hotel_name}</h4>
-                  <table className="ticket-data">
-                    <tbody>
-                      <tr>
-                        <th>{hotel.check_in}</th>
-                        <th>{hotel.city}</th>
-                        <th>{hotel.check_out}</th>
-                      </tr>
-                      <tr>
-                        <td>{hotel.room_type}</td>
-                        <td></td>
-                        <td>{hotel.guests}</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                  <button className="ticket-btn" onClick={() => addItem(hotel)}>
-                    Book
-                  </button>
-                  <a href="" className="price">
-                    ₹ {hotel.price}
-                  </a>
-                </div>
-              </div>
-            ))}
+              ))
+            )}
           </div>
+          <Login
+            isModalOpen={isLoginModalOpen}
+            openModal={openLoginModal}
+            closeModal={closeLoginModal}
+          />
         </div>
         <Footer />
       </CartProvider>

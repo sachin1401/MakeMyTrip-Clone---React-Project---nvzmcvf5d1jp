@@ -18,7 +18,9 @@ const Filter = ({ handleFilter }) => {
   };
 
   const handlePriceRangeChange = (priceRange) => {
-    setSelectedPriceRange(priceRange);
+    setSelectedPriceRange((prevPriceRange) =>
+      prevPriceRange === priceRange ? "" : priceRange
+    );
   };
 
   useEffect(() => {

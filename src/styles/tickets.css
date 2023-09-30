@@ -11,7 +11,7 @@ body {
     margin: 10px auto 50px 20px;   
   }
   
-  * {
+  * { 
     box-sizing: border-box;
   }
   .ticket-data{
@@ -20,11 +20,43 @@ body {
   .ticket-data th{
     text-align: left;    
   }
-  .ticket-btn{
+ 
+  .ticket-btn {
     margin-left: 30rem;
     background-color: #003290;
     border-radius: 80px;
+    padding: 15px 35px; /* Add padding for better visual appearance */
+    color: #fff; /* Set text color to white */
+  
+    /* Add hover effect */
+    transition: background-color 0.2s; /* Smooth transition */
   }
+  
+  .ticket-btn:hover {
+    background-color: #0055b3; /* Change background color on hover */
+  }
+  
+  /* Add click effect (active state) */
+  .ticket-btn:active {
+    background-color: #001b59; /* Change background color when clicked */
+  }
+
+/* In your existing CSS file (e.g., searchContainer.css or a new CSS file) */
+
+.not-available-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%; /* Ensure it takes the full height of its container */
+  /* background-color: #ffcccc; */
+  color: #091244;
+  padding: 10px;
+  font-size: 38px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
   
   .bp-card {
     position: relative;

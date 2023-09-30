@@ -90,15 +90,15 @@ const Cart = () => {
               Clear Cart
             </button>
 
-            {user ? ( // Check if user is logged in
-              <NavLink to={`/payment?total=${cartTotal.toFixed(2)}`}>
-                <button className="buy-now-btn">Buy Now</button>
-              </NavLink>
-            ) : (
+            {/* {user ? (  */}
+            <NavLink to={`/payment?total=${cartTotal.toFixed(2)}`}>
+              <button className="buy-now-btn">Buy Now</button>
+            </NavLink>
+            {/* ) : (
               <button className="buy-now-btn" onClick={openLoginModal}>
                 Buy Now
               </button>
-            )}
+            )} */}
 
             {/* <NavLink to={`/payment?total=${cartTotal.toFixed(2)}`}>
               <button className="buy-now-btn">Buy Now</button>
